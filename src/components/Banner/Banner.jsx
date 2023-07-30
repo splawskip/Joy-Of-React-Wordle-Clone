@@ -1,6 +1,8 @@
 import React from 'react';
 
-function Banner({ status, tries, answer }) {
+function Banner({
+  status, tries, answer, handleRestart,
+}) {
   return (
     <div className={`banner ${status ? 'happy' : 'sad'}`}>
       {status
@@ -26,6 +28,7 @@ function Banner({ status, tries, answer }) {
             .
           </p>
         )}
+      <button className="restart-button" type="button" onClick={() => handleRestart()}>Restart the game</button>
     </div>
   );
 }
